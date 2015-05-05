@@ -1,0 +1,154 @@
+/*
+ * Copyright (C) 2015 Picon software
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+    //noinspection GroovyAssignabilityCheck
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.2'
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'crashlytics'
+apply plugin: 'android-apt'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'http://download.crashlytics.com/maven' }
+}
+
+def buildTime() {
+    return new Date().format("yyyy-MM-dd'T'HH:mm'Z'", TimeZone.getTimeZone("UTC"))
+}
+
+def versionMajor = 3
+def versionMinor = 4
+def versionPatch = 0
+def dbNumber = 1
+def eveReleaseName = 'mosaic'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        versionCode versionMajor * 100000 + versionMinor * 10000 + versionPatch * 100 + dbNumber
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}-${eveReleaseName}"
+        minSdkVersion 14
+        targetSdkVersion 22
+
+        buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
+
+        resConfigs "en", "de", "fr", "ru"
+        resConfigs "nodpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    signingConfigs {
+        release {
+        }
+        debug {
+            storeFile file("debug.keystore")
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            //noinspection GroovyAssignabilityCheck
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            versionNameSuffix "-dev"
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            //noinspection GroovyAssignabilityCheck
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //noinspection GroovyAssignabilityCheck
+    productFlavors {
+        defaultFlavor {
+            proguardFile 'proguard-rules.txt'
+        }
+    }
+
+	lintOptions {
+		// Or, if you prefer, you can continue to check for errors in release builds,
+		// but continue the build even when errors are found:
+		abortOnError false
+	}
+}
+
+//noinspection GroovyAssignabilityCheck
+dependencies {
+    compile project(':eoit-industry-api')
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.github.picon-software:eo-api:1.1.3'
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:recyclerview-v7:22.1.1'
+    compile 'com.squareup.picasso:picasso:2.+'
+    compile 'com.squareup.dagger:dagger:1.+'
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.0.1'
+    compile('de.keyboardsurfer.android.widget:crouton:1.8.4@aar') {
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+    compile 'com.melnykov:floatingactionbutton:1.0.5'
+    compile 'com.jakewharton:butterknife:5.1.2'
+    compile 'com.crashlytics.android:crashlytics:1.+'
+    compile 'com.google.guava:guava:18.0'
+    apt 'com.squareup.dagger:dagger-compiler:1.+'
+    androidTestCompile 'junit:junit:4.+'
+}
+
+File propFile = file('signing.properties');
+if (propFile.exists()) {
+    def Properties props = new Properties()
+    props.load(new FileInputStream(propFile))
+
+    if (props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+            props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+        //noinspection GroovyAssignabilityCheck
+        android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+        //noinspection GroovyAssignabilityCheck
+        android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+        //noinspection GroovyAssignabilityCheck
+        android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+        //noinspection GroovyAssignabilityCheck
+        android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+    } else {
+        android.buildTypes.release.signingConfig = null
+    }
+} else {
+    android.buildTypes.release.signingConfig = null
+}

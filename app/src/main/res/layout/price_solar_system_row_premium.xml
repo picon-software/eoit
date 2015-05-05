@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="110dp"
+	android:paddingLeft="2dp"
+	android:paddingRight="5dp"
+	android:paddingTop="2dp">
+
+	<TextView
+		android:id="@+id/station_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="2dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginTop="2dp"
+		android:layout_toRightOf="@+id/station_icon"
+		android:ellipsize="end"
+		android:fontFamily="sans-serif-light"
+		android:maxLines="1"
+		tools:text="Caldari Business Tribunal Bureau Offices"
+		android:textColor="@android:color/primary_text_dark"
+		android:textSize="18sp"
+		android:textStyle="normal" />
+
+	<TextView
+		android:id="@+id/location_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/station_name"
+		android:layout_below="@+id/station_name"
+		android:layout_marginLeft="4dp"
+		android:fontFamily="sans-serif-condensed"
+		tools:text="The Forge > Jita IV - Moon 4"
+		android:textColor="@android:color/secondary_text_dark"
+		android:textSize="11sp" />
+
+	<ImageView
+		android:id="@+id/station_icon"
+		android:layout_width="55dp"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginRight="2dp"
+		android:contentDescription="@string/station"
+		android:scaleType="centerCrop"
+		android:src="@drawable/unknown" />
+
+	<TextView
+		android:id="@+id/sell_price"
+		style="@style/sellPrice"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/station_name"
+		android:layout_below="@+id/location_name"
+		android:layout_marginTop="10dp"
+		tools:text="10.4 kISK" />
+
+	<TextView
+		android:id="@+id/sell_volume"
+		style="@style/priceQuantity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/sell_price"
+		android:layout_below="@+id/location_name"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="5dp"
+		tools:text="812" />
+
+	<TextView
+		android:id="@+id/buy_price"
+		style="@style/buyPrice"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/station_name"
+		android:layout_below="@+id/sell_price"
+		tools:text="8.5 kISK" />
+
+	<TextView
+		android:id="@+id/buy_volume"
+		style="@style/priceQuantity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/buy_price"
+		android:layout_below="@+id/sell_price"
+		android:layout_marginLeft="5dp"
+		tools:text="125" />
+
+</RelativeLayout>

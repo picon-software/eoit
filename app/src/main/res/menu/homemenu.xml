@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2015 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<menu
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+		android:id="@+id/dump_database"
+		app:showAsAction="never"
+		android:visible="false"
+		android:title="@string/dump_database" />
+	<item
+		android:id="@+id/search_option"
+		android:icon="@android:drawable/ic_menu_search"
+		app:showAsAction="collapseActionView|ifRoom"
+		app:actionViewClass="android.support.v7.widget.SearchView"
+		android:title="@string/search_hint" />
+	<item
+		android:id="@+id/STOCK_OPTION"
+		android:icon="@drawable/icn_asset"
+		app:showAsAction="ifRoom|withText"
+		android:title="@string/stock" />
+	<item
+		android:id="@+id/mining_session_option"
+		app:showAsAction="ifRoom|withText"
+		android:title="@string/mining_session_option" />
+	<item
+		android:id="@+id/oremap_option"
+		android:title="@string/ore_map_option" />
+	<item
+		android:id="@+id/feedback_option"
+		android:title="@string/feedback_option" />
+	<item
+		android:id="@+id/PARAMETERS_OPTION"
+		android:icon="@android:drawable/ic_menu_preferences"
+		android:title="@string/parameters" />
+	<item
+		android:id="@+id/HELP_OPTION"
+		android:icon="@android:drawable/ic_menu_help"
+		android:title="@string/help" />
+
+</menu>

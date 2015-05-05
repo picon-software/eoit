@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2015 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="@string/character">
+		<ListPreference
+			android:dialogTitle="@string/choose_character"
+			android:key="character_id_str"
+			android:summary="@string/choose_character"
+			android:enabled="false"
+			android:title="@string/character" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/location_management">
+		<PreferenceScreen
+			android:title="@string/location_management"
+			android:summary="@string/location_management_description">
+			<intent android:action="fr.piconsoft.eoit.LocationManagementActivity" />
+		</PreferenceScreen>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/mining">
+		<CheckBoxPreference
+			android:key="mining_active"
+			android:summary="@string/activate_mining_description"
+			android:title="@string/mining" />
+
+		<ListPreference
+			android:title="@string/mining_regions"
+			android:dialogTitle="@string/mining_regions"
+			android:entries="@array/mining_regions_array"
+			android:entryValues="@array/mining_regions_values_array"
+			android:key="territory_str"
+			android:dependency="mining_active"
+			android:summary="@string/mining_regions_description"
+			android:defaultValue="1" />
+
+		<ListPreference
+			android:dialogTitle="@string/mining_regions_sec"
+			android:entries="@array/mining_regions_sec_array"
+			android:entryValues="@array/mining_regions_sec_array"
+			android:key="mining_regions_sec_str"
+			android:dependency="mining_active"
+			android:summary="@string/mining_regions_sec_description"
+			android:title="@string/mining_regions_sec"
+			android:defaultValue="0.7" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/icon_render_size">
+		<ListPreference
+			android:dialogTitle="@string/icon_size"
+			android:entries="@array/icon_size_values_array"
+			android:entryValues="@array/icon_size_entry_values_array"
+			android:key="icon_size"
+			android:title="@string/icon_size"
+			android:defaultValue="64" />
+
+		<ListPreference
+			android:dialogTitle="@string/render_size"
+			android:entries="@array/render_size_values_array"
+			android:entryValues="@array/render_size_entry_values_array"
+			android:key="render_size"
+			android:title="@string/render_size"
+			android:defaultValue="256" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/language">
+        <Preference
+            android:key="language_intent"
+            android:title="@string/language_preference_title">
+            <intent android:action="fr.piconsoft.eoit.LanguageSelectionActivity" />
+        </Preference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/about">
+        <Preference
+            android:key="about_version"
+            android:title="@string/version">
+        </Preference>
+	</PreferenceCategory>
+
+</PreferenceScreen>

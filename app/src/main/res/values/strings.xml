@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2015 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<resources>
+
+	<string name="app_name">Industrial Tool</string>
+	<string name="app_description">The eve online industrialist tool for dummies.</string>
+	<string name="volumeUnit">m³</string>
+	<string name="isk">&lt;sup>&lt;small>ISK&lt;/small>&lt;/sup></string>
+	<string name="item_info_activity_name">Items</string>
+	<string name="item_list_buy">Buy</string>
+	<string name="item_list_sell">Sell</string>
+	<string name="item_list_own">Own</string>
+	<string name="invalid_price">Invalid price</string>
+	<string name="own_price">Your own price for the item</string>
+	<string name="item_list_produce">Produce</string>
+	<string name="profit">Profit</string>
+	<string name="production">Production</string>
+	<string name="trade">Trade</string>
+	<string name="both">Both</string>
+	<string name="manufacture_section_label">MANUFACTURING</string>
+	<string name="manufacturing">Manufacturing</string>
+	<string name="usedPrice">Used price</string>
+	<string name="usedPriceDescription">The price that will be used for the calculation of the item that require this one.</string>
+	<string name="prices_prompt">Choose a price</string>
+	<string name="item_buy_desc">Acquired through buy orders</string>
+	<string name="item_sell_desc">Acquired through sell orders</string>
+	<string name="item_prod_desc">Produced</string>
+
+	<string-array name="prices_array">
+		<item>Sell</item>
+		<!-- 0 -->
+		<item>Buy</item>
+		<!-- 1 -->
+		<item>Produce</item>
+		<!-- 2 -->
+	</string-array>
+
+	<string name="blueprint_info_pattern">Produce %1$d unit(s) in %2$s</string>
+	<string name="blueprint_info_tech2_pattern">M.E. %1$d  •  T.E. %2$d  •  %3$d run(s)\nProduce %4$d unit(s) in %5$s</string>
+	<string name="blueprint_info_tech2_pattern2">M.E. %1$d\nT.E. %2$d\n%3$d run(s)\nProduce %4$d unit(s)</string>
+	<string name="blueprint_desc">ME %1$d • TE %2$d • %3$d run(s)</string>
+	<string name="unitPerBatchStr1">Produce</string>
+	<string name="unitPerBatchStr2">unit(s)</string>
+	<string name="ml">M.E.</string>
+	<string name="pl">P.E.</string>
+	<string name="billOfMaterial">Bill of materials</string>
+	<!-- The label for use as a searchable item -->
+	<string name="search_label">Items</string>
+	<!-- The hint text that appears in the search box. -->
+	<string name="search_hint">Search an item</string>
+	<string name="search_instructions">Item name</string>
+	<!-- The description that will show up in the search settings for this source. -->
+	<string name="settings_description">Items</string>
+	<string name="extramaterials">Extra materials</string>
+	<string name="damageperjob">damage/job</string>
+	<string name="stock">Assets</string>
+	<string name="stockActivityTitle">Assets in Production station</string>
+	<string name="updatingOutposts">Updating outpost list…</string>
+	<string name="updateOutposts">Update outpost list</string>
+	<string name="refresh_stock">Refresh assets</string>
+	<string name="quantity">Quantity</string>
+	<string name="itemlisttitle">Favorite Items</string>
+	<string name="itemlist_empty_message">To add a new item to this list, first search it and click the star icon in the item info screen.</string>
+	<string name="manufacture">Manufacture</string>
+	<string name="runs">Runs</string>
+	<string name="run">run(s)</string>
+	<string name="time">Time</string>
+	<string name="production_needs">PRODUCTION NEEDS</string>
+	<string name="cost">Cost</string>
+	<string name="invention">Invention</string>
+	<string name="required_skills_upper">REQUIRED SKILLS</string>
+	<string name="required_skills">Required skills</string>
+	<string name="initiator">Initiator</string>
+
+	<string-array name="skill_level_array">
+		<item>Unknown</item>
+		<!-- 0 -->
+		<item>I</item>
+		<!-- 1 -->
+		<item>II</item>
+		<!-- 2 -->
+		<item>III</item>
+		<!-- 3 -->
+		<item>IV</item>
+		<!-- 4 -->
+		<item>V</item>
+		<!-- 5 -->
+	</string-array>
+
+	<string name="invention_chances">Invention chances</string>
+	<string name="blueprint_spec">Blueprint spec.</string>
+	<string name="required_items_upper">REQUIRED ITEMS</string>
+	<string name="required_items">Required items</string>
+	<string name="blueprint_copy_str1"> runs blueprint copy of </string>
+	<string name="meta_level">Metalevel</string>
+	<string name="meta_level_description">The meta level of the named item.</string>
+	<string name="decryptorCheck">Use decryptor</string>
+	<string name="decryptor">Decryptor</string>
+	<string name="decryptor_prompt">Choose a decryptor</string>
+	<string name="no_decryptor">No decryptor</string>
+	<string name="decryptor_desc">ME %1$+d • TE %2$+d • Max run %3$+d • Probability x%4$.1f</string>
+	<string name="relic_desc">Base probability %1$.1f • %2$d Runs</string>
+	<string name="times">Times</string>
+	<string name="parameters">Settings</string>
+	<string name="api_key">Manage Api key</string>
+	<string name="api_key_help">Place the key in /eoit/api_key.txt, the file must contain keyID:vCode</string>
+	<string name="api_key_userid">keyID</string>
+	<string name="api_key_key">vCode</string>
+	<string name="api_key_create_key_desc">Use the button below to create a new key with the core feeds required to use this application.</string>
+	<string name="api_key_create_key">Create key</string>
+	<string name="api_key_install_key_desc">After the creation of the key click on the button below to install the new api key in this application. Click on the Install link and the api key values will be saved in the application.</string>
+	<string name="api_key_install_key">Install key</string>
+	<string name="api_key_manual_install_key_desc">If for any reason you the api key cannot be installed you could enter manually the values using the button below.</string>
+	<string name="api_key_manual_install_key">Manual entry</string>
+	<string name="api_key_saver_activity_title">Save the key</string>
+	<string name="api_parsing_error">Error while reading API result.</string>
+	<string name="service_unavalailable_error">Service unavailable, please try again later.</string>
+	<string name="api_download_error">Error while accessing API.</string>
+	<string name="api_timeout_error">API connection timeout. Try again later.</string>
+	<string name="api_no_character">No character found.</string>
+	<string name="api_no_character_selected">You need to select a character in the settings.</string>
+	<string name="api_wrong_type">You must provide a Character type Key.</string>
+	<string name="ec_parsing_error">Error while reading Eve Central result.</string>
+	<string name="ec_download_error">Error while acquiring prices. Please try again later.</string>
+	<string name="ec_timeout_error">Connection timeout. Please try again later.</string>
+	<string name="ec_network_error">Network error. Please try again later.</string>
+	<string name="no_internet_error">No internet connection !</string>
+	<string name="character">Character</string>
+	<string name="choose_character">Choose a character</string>
+	<string name="no_character_found">No character found.</string>
+	<string name="parameters_not_set">Parameters not set. \nUse Menu > Parameters</string>
+	<string name="apikey_file_error">Error while reading the file /eoit/api_key.txt</string>
+	<string name="apikey_file_format_error">The api key file is not well formated.</string>
+	<string name="parameters_saved">Parameters saved.</string>
+	<string name="skills">Skills</string>
+	<string name="refresh_skills">Refresh Skills</string>
+	<string name="stations">Stations</string>
+	<string name="location_management">Location management</string>
+	<string name="location_management_description">Choose the production and trade stations.</string>
+	<string name="station_add_remove">Add/Remove</string>
+	<string name="station_current_favorite_title">CURRENT FAVORITE</string>
+	<string name="station_main_hubs_title">MAIN HUBS</string>
+	<string name="station_assets_title">FROM YOUR ASSETS</string>
+	<string name="station_role_title">Station Role</string>
+	<string name="stations_help_message">Type the name of the region/solar system/station and click on the values listed. Inputs are case sensitive.</string>
+	<string name="trade_station">Trade station</string>
+	<string name="trade_station_description">In this station you will buy and sell your goods.</string>
+	<string name="prod_station">Production station</string>
+	<string name="prod_station_description">In this station you will produce items and store your asset.</string>
+	<string name="both_station">Prod. and trade station</string>
+	<string name="no_trade_station">No trade station is selected.</string>
+	<string name="no_prod_station">No production station is selected.</string>
+	<string name="choose_region">Select a region</string>
+	<string name="choose_solar_system">Select a solar system</string>
+	<string name="choose_station">Select a station</string>
+	<string name="stations_error">Invalid station name</string>
+	<string name="stations_error_desc">Enter a valid station name</string>
+	<string name="region">Region</string>
+	<string name="solar_system">Solar system</string>
+	<string name="station">Station</string>
+	<string name="choose_btn">Choose</string>
+	<string name="standing">Standing</string>
+	<string name="retreiving_standing">Retreiving corp. standing…</string>
+	<string name="retreiving_station_infos">Retreiving station infos</string>
+	<string name="saving_station_infos">Saving station infos</string>
+	<string name="retreiving_station_prices">Retreiving prices in favorite stations</string>
+	<string name="mining">Mining</string>
+	<string name="activate_mining_description">Activate mining to see in the production plan the asteroids you need to mine.</string>
+	<string name="mining_regions">Where do you mine ?</string>
+	<string name="mining_regions_description">Choose the territory where you plan to mine.</string>
+	<string-array name="mining_regions_array">
+		<item>Amarr space</item>
+		<item>Caldari space</item>
+		<item>Gallente space</item>
+		<item>Minmatar space</item>
+	</string-array>
+	<string-array name="mining_regions_values_array">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="mining_regions_sec_array">
+		<item>1.0</item>
+		<item>0.9</item>
+		<item>0.8</item>
+		<item>0.7</item>
+		<item>0.6</item>
+		<item>0.5</item>
+		<item>0.4</item>
+		<item>0.3</item>
+		<item>0.2</item>
+		<item>0.1</item>
+		<item>0.0</item>
+	</string-array>
+	<string name="mining_regions_sec">Security status</string>
+	<string name="mining_regions_sec_description">Select the security status of the system where you plan to mine.</string>
+	<string name="icon_render_size">Icon and render sizes</string>
+	<string name="icon_size">Icon sizes</string>
+	<string name="render_size">Render sizes</string>
+	<string-array name="icon_size_values_array">
+		<item>64x64</item>
+		<item>32x32</item>
+	</string-array>
+	<string-array name="icon_size_entry_values_array">
+		<item>64</item>
+		<item>32</item>
+	</string-array>
+	<string-array name="render_size_values_array">
+		<item>512x512</item>
+		<item>256x256</item>
+		<item>128x128</item>
+		<item>64x64</item>
+		<item>32x32</item>
+	</string-array>
+	<string-array name="render_size_entry_values_array">
+		<item>512</item>
+		<item>256</item>
+		<item>128</item>
+		<item>64</item>
+		<item>32</item>
+	</string-array>
+	<string name="wait_message">Please wait…</string>
+	<string name="updating_prices">Updating prices</string>
+	<string name="full_prices_refresh">Full prices refresh</string>
+	<string name="inserting_dump">Creating database…</string>
+	<string name="upgrading_db">Upgrading database</string>
+	<string name="reading_dump">Loading data…</string>
+	<string name="compact_db">Compacting database…</string>
+	<string name="optimize_db">Optimizing database…</string>
+	<string name="database_locked">Database locked</string>
+	<string name="database_locked_message">Please close all instance of the application before starting a new one.</string>
+	<string name="database_locked_close_button_message">Close</string>
+	<string name="database_no_space">Insufficient space</string>
+	<string name="database_no_space_message">Eve Online Industrial tool requires %1$dMb of free internal storage.</string>
+	<string name="loading_icons">Loading icon cache…</string>
+	<string name="loading_params">Loading parameters…</string>
+	<string name="refining_label">Refining</string>
+	<string name="produce_label">Produce</string>
+	<string name="no_price_found">Some prices were not found</string>
+	<string name="price_error">Error while retrieving prices</string>
+	<string name="refresh_prices">Refresh prices</string>
+	<string name="favorite">Favorite</string>
+	<string name="itemIcon">Item icon</string>
+	<string name="unknown">Unknown</string>
+	<string name="tritanium">Tritanium</string>
+	<string name="blueprint">BLUEPRINT</string>
+	<string name="blueprint_activity_title">Blueprint</string>
+	<string name="materials">MATERIALS</string>
+	<string name="extra_materials">EXTRA MATERIALS</string>
+	<string name="required_blueprint_copy">REQUIRED BLUEPRINT COPY</string>
+	<string name="required_decryptor">DECRYPTOR</string>
+	<string name="required_named_item">NAMED ITEM</string>
+	<string name="missing">SHOPPING LIST</string>
+	<string name="price_repartition">PRICE DISTRIBUTION</string>
+	<string name="refining">REFINING</string>
+	<string name="production_section">PRODUCTION</string>
+	<string name="waste_factor">Waste factor</string>
+	<string name="research_copy">COPY BLUEPRINT</string>
+	<string name="blueprint_infos">BLUEPRINT INFORMATION</string>
+	<string name="me_desc">Material efficiency</string>
+	<string name="te_desc">Time efficiency</string>
+	<string name="max_run">Max runs</string>
+	<string name="unit_per_batch">Number of unit produced during 1 run</string>
+	<string name="invention_section">INVENTION</string>
+	<string name="produce_section">PRODUCE</string>
+	<string name="stocklist_empty_message">There is no items in this station or the list was not refreshed.</string>
+	<string name="help">Help</string>
+	<string name="help_menu_options">Menu options</string>
+	<string name="help_favorite1">This screen show you the items that you have set as favorite with the star icon in the item info screen.</string>
+	<string name="help_favorite2">let you access your production station asset.</string>
+	<string name="help_favorite3">to change the parameters.</string>
+	<string name="help_favorite4">search items. You can type a part of the name or the category of the item here. \n (ex: trit, frig, …)</string>
+	<string name="help_api_key"> - connect your phone to your computer\n - open/create the folder \'eoit\' at the root of your sdcard\n - open/create the file \'api_key.txt\'\n - place your [keyID]:[vCode] in here (only one [keyID]:[vCode] is supported, and use the new API keys).\n - disconnect your phone from your computer and your done.</string>
+	<string name="show_more_price">Show more prices</string>
+	<string name="price_favorite_stations_empty_message">The list is empty you must add a new station by clicking the Add/Remove button.</string>
+	<string name="mining_session_objectives">OBJECTIVES</string>
+	<string name="mining_session_cargo">ASTEROIDS IN CARGO</string>
+	<string name="mining_session_reprocess">REPROCESS</string>
+	<string name="mining_session_option">Start a mining session</string>
+	<string name="mining_session_add_item">Add item</string>
+	<string name="tips_later">Later</string>
+	<string name="tips_hide">Hide</string>
+	<string name="missing_api_title">Missing API</string>
+	<string name="missing_api_message1">You are using the default account. You will have :</string>
+	<string name="missing_api_message2">- All skills at level 5.</string>
+	<string name="missing_api_message3">- No assets in production station.</string>
+	<string name="missing_api_message4">Do you want to set you API ?</string>
+	<string name="missing_api_action">Change</string>
+	<string name="missing_api_message5">- Only main hub in location management.</string>
+	<string name="all_level_v">All Level 5</string>
+	<string name="default_station_title">Default station</string>
+	<string name="default_station_message1">You are using the default station.</string>
+	<string name="default_station_message2">- Buy and Sell prices will be those in the solar system of the station.</string>
+	<string name="default_station_message3">- Manufacturing will be calculated in this station.</string>
+	<string name="default_station_message4">- Assets will be retreived from this station.</string>
+	<string name="default_station_message5">- Location prices will display only this station.</string>
+	<string name="default_station_message6">Do you want to add/remove stations ?</string>
+	<string name="default_station_action">Add/remove</string>
+	<string name="no_station_title">No Station set</string>
+	<string name="no_station_message1">The trade station or the production station are no set. The default station will be used.</string>
+
+	<string name="feedback_option">Send feedback</string>
+	<string name="donate_button">Donate</string>
+	<string name="contribution_title">Contribution</string>
+	<string name="contribution_message1">Hi. It seems that you\'re playing with [EOIT] for some time now. If you want to show your support you could :</string>
+	<string name="contribution_message2">- Rate this app.</string>
+	<string name="contribution_message3">- Donate</string>
+	<string name="contribution_message4">Thank you very much for your contribution.</string>
+	<string name="contribution_rate">Rate</string>
+	<string name="contribution_donate">Donate</string>
+	<string name="character_sheet">Character sheet</string>
+	<string name="mandatory">Mandatory</string>
+	<string name="refresh">Refresh</string>
+	<string name="cancel">Cancel</string>
+	<string name="validate">Validate</string>
+	<string name="refreshing_skill">Refreshing skill…</string>
+	<string name="key_saved">API key saved.</string>
+	<string name="api_upgrade_title">API update</string>
+	<string name="api_upgrade_message">The API handling has been updated, you will be directed to the Api saving screen to revalidate your credentials.</string>
+	<string name="dump_database">Dump database</string>
+	<string name="clear_cache">Clear the image cache</string>
+	<string name="ore_map_option">Ore distribution</string>
+	<string name="amarr_space">Amarr space</string>
+	<string name="caldari_space">Caldari space</string>
+	<string name="gallente_space">Gallente space</string>
+	<string name="minmatar_space">Minmatar space</string>
+	<string name="dash">-</string>
+	<string name="sec_10">1.0</string>
+	<string name="sec_9">0.9</string>
+	<string name="sec_8">0.8</string>
+	<string name="sec_7">0.7</string>
+	<string name="sec_5">0.5</string>
+	<string name="sec_4">0.4</string>
+	<string name="sec_3">0.3</string>
+	<string name="sec_2">0.2</string>
+	<string name="sec_1">0.1</string>
+	<string name="sec_0">0.0</string>
+	<string name="total_profit">Total profit</string>
+	<string name="me">M.E.</string>
+	<string name="pe">T.E.</string>
+	<string name="drawer_open">Open drawer</string>
+	<string name="drawer_close">close_drawer</string>
+	<string name="in">in</string>
+	<string name="research_cost">Research cost</string>
+	<string name="top4_waste">Top 4 Wasted materials</string>
+	<string name="waste">Waste</string>
+	<string name="level">level</string>
+	<string name="material">Material</string>
+	<string name="unlock">Unlock</string>
+	<string name="free_items_spent">All demo items are spent.</string>
+	<string name="star">*</string>
+	<string name="picon_software">Picon software</string>
+	<string name="ccp_copyright">©CCP hf. All rights reserved. Used with permission.</string>
+	<string name="retreiving_assets">Retreiving assets…</string>
+	<string name="job_cost">Job cost</string>
+	<string name="me_te_dialog_title">Update the ME and TE</string>
+	<string name="assets_empty_message">No asset found in this station.\n\nSetup your api credentials\n\nChoose a valid production station where are your assets\n\nRefresh</string>
+	<string name="language">Language</string>
+	<string name="language_preference_title"><![CDATA[Items &amp; categories language (beta)]]></string>
+	<string name="retreiving_industry_jobs">Retreiving industry jobs…</string>
+	<string name="about">About</string>
+	<string name="version">Version</string>
+</resources>

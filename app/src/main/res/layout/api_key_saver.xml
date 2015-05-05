@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp"
+	tools:context=".activity.basic.ApiKeySaverActivity">
+
+	<TextView
+		android:id="@+id/tv1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginBottom="10dp"
+		android:text="API CREDENTIAL" />
+
+	<EditText
+		android:id="@+id/key_id"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tv1"
+		android:hint="@string/api_key_userid"
+		android:inputType="number" />
+
+	<EditText
+		android:id="@+id/v_code"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/key_id"
+		android:hint="@string/api_key_key"
+		android:inputType="textMultiLine" />
+
+	<TextView
+		android:id="@+id/tv2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/v_code"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="30dp"
+		android:text="VALIDATION" />
+
+	<ImageView
+		android:id="@+id/valid_img1"
+		android:layout_width="15dp"
+		android:layout_height="15dp"
+		android:layout_alignBottom="@+id/valid_mandatory1"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/tv2"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="10dp"
+		android:contentDescription="@string/unknown"
+		android:src="@drawable/icon_ko" />
+
+	<TextView
+		android:id="@+id/valid_name1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tv2"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/valid_img1"
+		android:text="@string/character_sheet"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+		android:id="@+id/valid_mandatory1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/valid_name1"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/valid_img1"
+		android:text="@string/mandatory"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<ImageView
+		android:id="@+id/valid_img2"
+		android:layout_width="15dp"
+		android:layout_height="15dp"
+		android:layout_alignBottom="@+id/valid_mandatory2"
+		android:layout_alignParentLeft="true"
+		android:layout_alignTop="@+id/valid_name2"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="10dp"
+		android:contentDescription="@string/unknown"
+		android:src="@drawable/icon_ko" />
+
+	<TextView
+		android:id="@+id/valid_name2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/valid_mandatory1"
+		android:layout_marginLeft="5dp"
+		android:layout_marginTop="10dp"
+		android:layout_toRightOf="@+id/valid_img2"
+		android:text="Asset list"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+		android:id="@+id/valid_mandatory2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/valid_name2"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/valid_img2"
+		android:text="@string/mandatory"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<ImageView
+		android:id="@+id/valid_img3"
+		android:layout_width="15dp"
+		android:layout_height="15dp"
+		android:layout_alignBottom="@+id/valid_mandatory3"
+		android:layout_alignParentLeft="true"
+		android:layout_alignTop="@+id/valid_name3"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="10dp"
+		android:contentDescription="@string/unknown"
+		android:src="@drawable/icon_ko" />
+
+	<TextView
+		android:id="@+id/valid_name3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/valid_mandatory2"
+		android:layout_marginLeft="5dp"
+		android:layout_marginTop="10dp"
+		android:layout_toRightOf="@+id/valid_img3"
+		android:text="Standings"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+		android:id="@+id/valid_mandatory3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/valid_name3"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/valid_img3"
+		android:text="@string/mandatory"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@android:id/button2"
+			style="?android:borderlessButtonStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:layout_weight="0.5"
+			android:onClick="onClickCancelBtn"
+			android:text="@string/cancel" />
+
+		<Button
+			android:id="@android:id/button1"
+			style="?android:borderlessButtonStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:layout_weight="0.5"
+			android:onClick="onClickOkBtn"
+			android:text="@string/validate" />
+
+	</LinearLayout>
+</RelativeLayout>

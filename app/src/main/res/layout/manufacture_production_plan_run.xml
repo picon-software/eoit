@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dp"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:gravity="center_vertical"
+	android:orientation="horizontal"
+	tools:background="@color/grey">
+
+	<ImageView
+		android:id="@+id/item_icon"
+		android:layout_width="48sp"
+		android:layout_height="48sp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="10dp"
+		android:contentDescription="@string/itemIcon"
+		android:src="@drawable/unknown" />
+
+	<EditText
+		android:id="@+id/runs"
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/item_icon"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="3dip"
+		android:inputType="number" />
+
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/runs"
+		android:layout_below="@+id/runs"
+		android:layout_marginLeft="10dp"
+		android:text="@string/runs"
+		android:textColor="@android:color/primary_text_dark"
+		android:textSize="12sp" />
+
+	<TextView
+		android:id="@+id/total_profit_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="13dp"
+		android:layout_toRightOf="@+id/runs"
+		android:text="@string/unknown"
+		android:textColor="@color/blue"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+
+	<TextView
+		android:id="@+id/total_time_value"
+		style="@style/timeText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/total_profit_value"
+		android:layout_below="@+id/total_profit_value"
+		android:text="@string/unknown" />
+</RelativeLayout>
+
+		

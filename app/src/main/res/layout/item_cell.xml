@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<ImageView
+		android:id="@+id/item_icon"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/bg"
+		android:contentDescription="@string/itemIcon"
+		android:src="@drawable/unknown" />
+
+	<View
+		android:id="@+id/ITEM_CELL_LEGEND"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_alignBottom="@+id/item_icon"
+		android:background="#99000000" />
+
+	<TextView
+		android:id="@+id/item_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/ITEM_CELL_LEGEND"
+		android:layout_alignTop="@+id/ITEM_CELL_LEGEND"
+		android:layout_margin="2dp"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:text="@string/unknown"
+		android:textColor="@android:color/primary_text_dark"
+		android:textStyle="bold" />
+
+	<TextView
+		android:id="@+id/PROFIT_VALUE"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignRight="@+id/ITEM_CELL_LEGEND"
+		android:layout_alignTop="@+id/ITEM_CELL_LEGEND"
+		android:layout_margin="2dp"
+		android:textColor="@color/blue"
+		android:textSize="8sp"
+		android:textStyle="bold" />
+
+	<TextView
+		android:id="@+id/SELL_PRICE_VALUE"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/ITEM_CELL_LEGEND"
+		android:layout_alignRight="@+id/ITEM_CELL_LEGEND"
+		android:layout_margin="2dp"
+		android:drawableLeft="@drawable/ic_sell"
+		android:drawablePadding="2dp"
+		android:textColor="@color/green"
+		android:textSize="12sp" />
+
+	<TextView
+		android:id="@+id/BUY_PRICE_VALUE"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/ITEM_CELL_LEGEND"
+		android:layout_alignRight="@+id/ITEM_CELL_LEGEND"
+		android:layout_margin="2dp"
+		android:drawableLeft="@drawable/ic_buy"
+		android:drawablePadding="2dp"
+		android:textSize="12sp" />
+
+	<TextView
+		android:id="@+id/PRODUCE_PRICE_VALUE"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/ITEM_CELL_LEGEND"
+		android:layout_alignRight="@+id/ITEM_CELL_LEGEND"
+		android:layout_margin="2dp"
+		android:drawableLeft="@drawable/ic_produce"
+		android:drawablePadding="2dp"
+		android:textColor="@color/red"
+		android:textSize="12sp" />
+
+</RelativeLayout>

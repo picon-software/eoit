@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:background="#e5e5e5"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ImageView
+		android:id="@+id/item_render"
+		android:layout_width="120dp"
+		android:layout_height="120dp"
+		android:layout_gravity="center_horizontal"
+		android:adjustViewBounds="true"
+		android:layout_marginTop="85dp"
+		android:contentDescription="@string/itemIcon"
+		android:scaleType="centerCrop" />
+
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		tools:context=".activity.premium.ManufactureActivity">
+
+		<com.echo.holographlibrary.PieGraph
+			android:id="@+id/piegraph"
+			android:layout_width="match_parent"
+			android:layout_height="250dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginBottom="20dp"
+			app:pieInnerCircleRatio="120"
+			app:pieBackground="#EEE"
+			app:pieSlicePadding="3dip" />
+
+		<fragment
+			android:id="@+id/item1"
+			android:name="fr.piconsoft.eoit.ui.SingleItemPremiumFragment"
+			android:layout_width="match_parent"
+			android:layout_height="56dp"
+			tools:layout="@layout/item_row_small_premium" />
+
+		<fragment
+			android:id="@+id/item2"
+			android:name="fr.piconsoft.eoit.ui.SingleItemPremiumFragment"
+			android:layout_width="match_parent"
+			android:layout_height="56dp"
+			tools:layout="@layout/item_row_small_premium" />
+
+		<fragment
+			android:id="@+id/item3"
+			android:name="fr.piconsoft.eoit.ui.SingleItemPremiumFragment"
+			android:layout_width="match_parent"
+			android:layout_height="56dp"
+			tools:layout="@layout/item_row_small_premium" />
+
+
+	</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/textView1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dp"
+				android:text="This screen show you an item." />
+
+			<TextView
+				android:id="@+id/textView2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView1"
+				android:layout_marginLeft="10dp"
+				android:text="Prices"
+				android:textColor="@android:color/primary_text_dark"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/textView3"
+				style="@style/percentPrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView2"
+				android:layout_marginLeft="20dp"
+				android:text="23.1%" />
+
+			<TextView
+				android:id="@+id/textView4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/textView3"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/textView3"
+				android:text="the profit percent, calculated between selling and production prices." />
+
+			<TextView
+				android:id="@+id/textView5"
+				style="@style/sellPrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView4"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="145 kISK" />
+
+			<TextView
+				android:id="@+id/textView6"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/textView5"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/textView5"
+				android:text="the lower selling price." />
+
+			<TextView
+				android:id="@+id/textView7"
+				style="@style/buyPrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView6"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="135 kISK" />
+
+			<TextView
+				android:id="@+id/textView8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/textView7"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/textView7"
+				android:text="the higher buying price." />
+
+			<TextView
+				android:id="@+id/textView9"
+				style="@style/producePrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView8"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="138 kISK" />
+
+			<TextView
+				android:id="@+id/textView10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/textView9"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/textView9"
+				android:text="the production price." />
+
+
+			<TextView
+				android:id="@+id/textView12"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView10"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="10dp"
+				android:text="Blueprint"
+				android:textColor="@android:color/primary_text_dark"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/textView13"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView12"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="ML  material level of the blueprint." />
+
+			<TextView
+				android:id="@+id/textView14"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView13"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="PL  productivity level of the blueprint." />
+
+			<TextView
+				android:id="@+id/textView15"
+				style="@style/timeText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView14"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="1h 23min 12s" />
+
+			<TextView
+				android:id="@+id/textView16"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/textView15"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/textView15"
+				android:text="the production time for one run." />
+
+			<TextView
+				android:id="@+id/textView17"
+				style="@style/producePrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView16"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="12.19 MISK" />
+
+			<TextView
+				android:id="@+id/textView18"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/textView17"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/textView17"
+				android:text="the cost of inventing the blueprint. Only in the case of Tech2 items." />
+
+			<TextView
+				android:id="@+id/textView19"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView18"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="10dp"
+				android:text="Materials"
+				android:textColor="@android:color/primary_text_dark"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/textView20"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/textView19"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="this section gives you the list of required items for the manufactoring." />
+
+			<TextView
+				android:id="@+id/textView21"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/textView20"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="On each line there is the name, the quantity, the wasted quantity in red and in some case the damage per job. The sign at the bottom of the icon means the price is not correct. In that case either you don&apos;t have a price nor the selected price is not valid." />
+
+			<LinearLayout
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/layout22"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textView21"
+				android:layout_marginLeft="20dp"
+				android:baselineAligned="false"
+				android:gravity="left|center_vertical"
+				android:orientation="horizontal" >
+
+				<LinearLayout
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical" >
+
+					<TextView
+						android:id="@+id/item_name"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:ellipsize="end"
+						android:singleLine="true"
+						android:text="Tritanium"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="@android:color/primary_text_dark" />
+
+					<LinearLayout
+						xmlns:android="http://schemas.android.com/apk/res/android"
+						android:id="@+id/ITEM_LAYOUT"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:gravity="left|center_vertical"
+						android:orientation="horizontal"
+						android:paddingLeft="10dp" >
+
+						<TextView
+							android:id="@+id/item_quantity"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="x12 300"
+							android:textColor="@android:color/secondary_text_dark"
+							android:textSize="12sp" />
+
+						<TextView
+							android:id="@+id/item_red_quantity"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="3dp"
+							android:text=" +12"
+							android:textColor="@color/red"
+							android:textSize="12sp"
+							android:textStyle="bold" />
+
+						<TextView
+							android:id="@+id/ITEM_DMG_PER_JOB"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="3dp"
+							android:text=" (90% damages/job)"
+							android:textColor="@android:color/secondary_text_dark"
+							android:textSize="12sp" />
+					</LinearLayout>
+				</LinearLayout>
+
+				<RelativeLayout
+					android:id="@+id/ICON_BORDER"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical|right" >
+
+					<ImageView
+						android:id="@+id/item_icon"
+						android:layout_width="38sp"
+						android:layout_height="38sp"
+						android:layout_marginBottom="1dp"
+						android:layout_marginLeft="2dp"
+						android:layout_marginRight="1dp"
+						android:layout_marginTop="1dp"
+						android:contentDescription="@string/itemIcon"
+						android:src="@drawable/icn_help_64" />
+
+					<ImageView
+						android:id="@+id/warn_icon"
+						android:layout_width="16dip"
+						android:layout_height="16dip"
+						android:layout_alignBottom="@+id/item_icon"
+						android:layout_alignRight="@+id/item_icon"
+						android:contentDescription="@string/itemIcon"
+						android:src="@drawable/warn_icon" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/textView22"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/layout22"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:text="In the case of asteroids, the material list will be replaced by the list of mineral that will be acquired after refine. The red value will correspond to wasted minerals and the taxes of the station." />
+		</RelativeLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp"
+			android:text="@string/help_menu_options" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="#66FFFFFF" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/menu_name1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="5dp"
+				android:layout_marginTop="10dp"
+				android:text="@string/manufacture"
+				android:textColor="@android:color/primary_text_dark"
+				android:textStyle="bold" />
+
+			<ImageView
+				android:id="@+id/menu_image1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignBottom="@+id/menu_name1"
+				android:layout_alignTop="@+id/menu_name1"
+				android:layout_toRightOf="@+id/menu_name1"
+				android:contentDescription="@string/unknown"
+				android:src="@drawable/ic_menu_goto" />
+
+			<TextView
+				android:id="@+id/menu_desc1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/menu_name1"
+				android:layout_toRightOf="@+id/menu_image1"
+				android:text="let you go to the manufacture screen." />
+
+			<TextView
+				android:id="@+id/menu_name2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/menu_desc1"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="5dp"
+				android:layout_marginTop="10dp"
+				android:text="@string/parameters"
+				android:textColor="@android:color/primary_text_dark"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/menu_desc2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/menu_name2"
+				android:layout_toRightOf="@+id/menu_name2"
+				android:text="@string/help_favorite3" />
+		</RelativeLayout>
+	</LinearLayout>
+
+</ScrollView>

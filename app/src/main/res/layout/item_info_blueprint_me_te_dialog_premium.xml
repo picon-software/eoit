@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="24dp"
+	android:background="#e5e5e5"
+	tools:context=".activity.premium.ItemInfoActivity">
+
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:text="@string/me_te_dialog_title"
+		android:textColor="@android:color/primary_text_light"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<ImageView
+		android:id="@+id/me_icon"
+		android:layout_width="36dp"
+		android:layout_height="36dp"
+		android:layout_marginTop="72dp"
+		android:layout_marginRight="4dp"
+		android:padding="4dp"
+		android:src="@drawable/industry_me"
+		android:contentDescription="@string/unknown" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:text="@string/me_desc"
+		android:layout_marginBottom="8dp"
+		android:layout_above="@+id/me_seekBar"
+		android:textColor="@android:color/secondary_text_light"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<TextView
+		android:id="@+id/me"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="5%"
+		android:textColor="@android:color/secondary_text_light"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_above="@+id/me_seekBar"
+		android:layout_alignParentRight="true"
+		android:gravity="center" />
+
+	<SeekBar
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/me_seekBar"
+		android:layout_alignTop="@+id/me_icon"
+		android:layout_toRightOf="@id/me_icon"
+		android:layout_alignParentRight="true"
+		android:max="10" />
+
+	<ImageView
+		android:id="@+id/te_icon"
+		android:layout_width="36dp"
+		android:layout_height="36dp"
+		android:layout_marginRight="4dp"
+		android:layout_marginTop="48dp"
+		android:padding="4dp"
+		android:layout_below="@id/me_icon"
+		android:src="@drawable/industry_te"
+		android:contentDescription="@string/unknown" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:text="@string/te_desc"
+		android:layout_marginBottom="8dp"
+		android:layout_above="@+id/te_seekBar"
+		android:textColor="@android:color/secondary_text_light"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<TextView
+		android:id="@+id/te"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="12%"
+		android:textColor="@android:color/secondary_text_light"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_above="@+id/te_seekBar"
+		android:layout_alignParentRight="true" />
+
+	<SeekBar
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/te_seekBar"
+		android:layout_alignTop="@+id/te_icon"
+		android:layout_toRightOf="@id/te_icon"
+		android:layout_alignParentRight="true"
+		android:max="20" />
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+.gradle
+local.properties
+app/project.properties
+
+# Private
+app/signing.properties
+eoit-endpoints.xml
+
+# IntelliJ
+*.iml
+.idea
+
+# build files
+build
+bin
+gen
+
+# Crashlytics
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+crashlytics.properties
+
+# tests
+testCreate.sqlite

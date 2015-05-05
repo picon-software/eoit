@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<resources>
+	<string name="donation_message1">Je suis un industrialiste depuis le début, et je n\'étais pas très satisfait des solutions que j\'avais trouvé, j\'ai alors décidé de contruire la mienne. Eve Online Industrial Tool (EOIT) est ma première application android.</string>
+	<string name="donation_message2">Je l\'ai développée sur mon temps libre. Si vous l\'appréciez et que vous désirez apporter votre aide vous pouvez faire un don.</string>
+	<string name="donation_message3">En transferant des ISK à :</string>
+	<string name="donation_message4">Ou avec le Play store.</string>
+	<string name="donation_about">À PROPOS</string>
+	<string name="donation_donate">FAIRE UN DON</string>
+
+	<string-array name="donation_level_array">
+		<item>Basic Donation</item> <!-- 0 -->
+		<item>Standard Donation</item> <!-- 1 -->
+		<item>Improved Donation</item> <!-- 2 -->
+		<item>Elite Donation</item> <!-- 3 -->
+		<item>OMG! Donation</item> <!-- 4 -->
+	</string-array>
+
+	<!--<string name="donation_option">Faire un don</string>-->
+	<string name="donate_button">Faire un don</string>
+
+	<string name="language">Langue</string>
+	<string name="language_preference_title"><![CDATA[Langue des objets (beta)]]></string>
+
+</resources>

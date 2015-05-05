@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2012 Picon software
+	
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License along
+	with this program; if not, write to the Free Software Foundation, Inc.,
+	51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/profit_sell_produce"
+            style="@style/percentPrice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="55dp"
+            android:text="2,8%"
+            android:textSize="15dp" />
+
+        <View
+            android:id="@+id/hL1"
+            android:layout_width="10dp"
+            android:layout_height="0.5dp"
+            android:layout_alignBottom="@+id/currency_sell_price"
+            android:layout_toLeftOf="@+id/profit_sell_produce"
+            android:background="#66FFFFFF" />
+
+        <View
+            android:id="@+id/hL2"
+            android:layout_width="10dp"
+            android:layout_height="0.5dp"
+            android:layout_alignBottom="@+id/currency_produce_price"
+            android:layout_toLeftOf="@+id/profit_sell_produce"
+            android:background="#66FFFFFF" />
+
+        <View
+            android:id="@+id/vL1"
+            android:layout_width="0.5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hL2"
+            android:layout_alignTop="@+id/hL1"
+            android:layout_toRightOf="@+id/hL1"
+            android:background="#66FFFFFF" />
+
+        <TextView
+            android:id="@+id/sell_price"
+            style="@style/sellPriceBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="sans-serif-light"
+            android:text="764,67M"
+            android:textSize="28dp"
+            android:textStyle="normal" />
+
+        <View
+            android:id="@+id/sell_price_indicator"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sell_price_desc"
+            android:layout_alignTop="@+id/sell_price"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/currency_sell_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sell_price"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/sell_price"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ISK"
+            android:textColor="@color/green"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sell_price_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sell_price"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="the lower selling price."
+            android:textColor="@color/green"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/buy_price"
+            style="@style/buyPriceBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/sell_price"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="sans-serif-light"
+            android:text="564,45M"
+            android:textSize="28dp"
+            android:textStyle="normal" />
+
+        <View
+            android:id="@+id/buy_price_indicator"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buy_price_desc"
+            android:layout_alignTop="@+id/buy_price"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/currency_buy_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buy_price"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/buy_price"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ISK"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/buy_price_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buy_price"
+            android:layout_below="@+id/sell_price"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="the higher buying price."
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/produce_price"
+            style="@style/producePriceBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/buy_price"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="sans-serif-light"
+            android:text="354,34M"
+            android:textSize="28dp" />
+
+        <View
+            android:id="@+id/produce_price_indicator"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/produce_price_desc"
+            android:layout_alignTop="@+id/produce_price"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/currency_produce_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/produce_price"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/produce_price"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ISK"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/produce_price_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/produce_price"
+            android:layout_below="@+id/buy_price"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="the produce price."
+            android:textColor="@color/red"
+            android:textSize="11dp" />
+
+        <EditText
+            android:id="@+id/fixed_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/produce_price"
+            android:layout_below="@+id/produce_price"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:ems="6"
+            android:fontFamily="sans-serif-light"
+            android:hint="A fixed price"
+            android:inputType="numberDecimal" >
+        </EditText>
+
+        <View
+            android:id="@+id/fixed_price_indicator"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fixed_price_desc"
+            android:layout_alignTop="@+id/fixed_price"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/currency_fixed_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fixed_price"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/fixed_price"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ISK"
+            android:textColor="@android:color/primary_text_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fixed_price_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fixed_price"
+            android:layout_below="@+id/fixed_price"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="the fixed price."
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/profit_fixed_produce"
+            style="@style/percentPrice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="127dp"
+            android:text="295,5%"
+            android:textSize="15dp" />
+
+        <View
+            android:id="@+id/hL3"
+            android:layout_width="10dp"
+            android:layout_height="0.5dp"
+            android:layout_alignBottom="@+id/currency_produce_price"
+            android:layout_toLeftOf="@+id/profit_fixed_produce"
+            android:background="#66FFFFFF" />
+
+        <View
+            android:id="@+id/hL4"
+            android:layout_width="10dp"
+            android:layout_height="0.5dp"
+            android:layout_alignBottom="@+id/currency_fixed_price"
+            android:layout_toLeftOf="@+id/profit_fixed_produce"
+            android:background="#66FFFFFF" />
+
+        <View
+            android:id="@+id/vL2"
+            android:layout_width="0.5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hL4"
+            android:layout_alignTop="@+id/hL3"
+            android:layout_toRightOf="@+id/hL4"
+            android:background="#66FFFFFF" />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/left_drawer"
+	android:layout_width="240dp"
+	android:layout_height="match_parent"
+	android:layout_gravity="start"
+	android:orientation="vertical"
+	android:paddingTop="60dp"
+	android:dividerHeight="0dp"
+	android:background="#111111">
+
+	<ImageView
+		android:layout_width="20dp"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/manufacturing_text"
+		android:layout_alignBottom="@+id/manufacturing_text"
+		android:layout_marginLeft="15dp"
+		android:layout_gravity="center"
+		android:src="@drawable/ic_produce_v2_white"
+		android:gravity="center"
+		android:focusable="false"
+		android:clickable="false"
+		android:contentDescription="@string/unknown" />
+
+	<Button
+		android:id="@+id/manufacturing_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fontFamily="sans-serif-light"
+		android:gravity="left"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingRight="10dp"
+		android:paddingLeft="50dp"
+		android:text="@string/manufacturing"
+		android:textSize="19sp"
+		android:textColor="@android:color/primary_text_dark"
+		android:background="?android:attr/selectableItemBackground"
+		android:onClick="onManufacture" />
+
+	<Button
+		android:id="@+id/more_price_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/manufacturing_text"
+		android:fontFamily="sans-serif-light"
+		android:gravity="left"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingRight="10dp"
+		android:paddingLeft="50dp"
+		android:text="@string/show_more_price"
+		android:textSize="19sp"
+		android:textColor="@android:color/primary_text_dark"
+		android:background="?android:attr/selectableItemBackground"
+		android:onClick="onMorePrice" />
+
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:layout_above="@+id/settings_text"
+		android:background="#444" />
+
+	<ImageView
+		android:layout_width="20dp"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/settings_text"
+		android:layout_alignBottom="@+id/settings_text"
+		android:layout_marginLeft="15dp"
+		android:paddingBottom="8dp"
+		android:layout_gravity="center"
+		android:src="@android:drawable/ic_menu_preferences"
+		android:gravity="center"
+		android:focusable="false"
+		android:clickable="false"
+		android:contentDescription="@string/unknown" />
+
+	<Button
+		android:id="@+id/settings_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/more_price_text"
+		android:gravity="left"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingRight="10dp"
+		android:paddingLeft="50dp"
+		android:text="@string/parameters"
+		android:textSize="17sp"
+		android:textColor="@android:color/secondary_text_dark"
+		android:background="?android:attr/selectableItemBackground"
+		android:onClick="onSettings" />
+
+	<ImageView
+		android:layout_width="20dp"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/help_text"
+		android:layout_alignBottom="@+id/help_text"
+		android:layout_marginLeft="15dp"
+		android:paddingBottom="8dp"
+		android:layout_gravity="center"
+		android:src="@android:drawable/ic_menu_help"
+		android:gravity="center"
+		android:focusable="false"
+		android:clickable="false"
+		android:contentDescription="@string/unknown" />
+
+	<Button
+		android:id="@+id/help_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/settings_text"
+		android:gravity="left"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingRight="10dp"
+		android:paddingLeft="50dp"
+		android:text="@string/help"
+		android:textSize="17sp"
+		android:textColor="@android:color/secondary_text_dark"
+		android:background="?android:attr/selectableItemBackground"
+		android:onClick="onHelp"
+		android:enabled="false" />
+
+</RelativeLayout>

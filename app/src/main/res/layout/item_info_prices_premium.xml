@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:animateLayoutChanges="true"
+	tools:context=".activity.premium.ItemInfoActivity">
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="20dp"
+		android:layout_alignBottom="@+id/price_radio_group"
+		android:background="@drawable/bottom_shadow" />
+
+	<RadioGroup
+		android:id="@+id/price_radio_group"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="#66000000"
+		android:padding="0dp">
+
+		<RadioButton
+			android:id="@+id/sell_price"
+			android:background="@drawable/bg_sell_selector"
+			android:layout_width="0dp"
+			android:layout_weight=".33"
+			android:layout_height="70dp"
+			android:button="@null"
+			android:gravity="center_horizontal"
+			android:layout_gravity="start"
+			android:checked="true"
+			android:padding="3dp"
+			/>
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#66666666"
+			android:layout_margin="3dp"
+			/>
+
+		<RadioButton
+			android:id="@+id/buy_price"
+			android:background="@drawable/bg_buy_selector"
+			android:layout_width="0dp"
+			android:layout_weight=".33"
+			android:layout_height="70dp"
+			android:button="@null"
+			android:gravity="center_horizontal"
+			android:layout_gravity="start"
+			android:padding="3dp" />
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#66666666"
+			android:layout_margin="3dp"
+			/>
+
+		<RadioButton
+			android:id="@+id/produce_price"
+			android:background="@drawable/bg_produce_selector"
+			android:layout_width="0dp"
+			android:layout_weight=".33"
+			android:layout_height="70dp"
+			android:button="@null"
+			android:gravity="center_horizontal"
+			android:layout_gravity="start"
+			android:checked="true"
+			android:padding="3dp" />
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#66666666"
+			android:layout_margin="3dp"
+			android:visibility="gone" />
+
+		<RadioButton
+			android:id="@+id/fixed_price"
+			android:background="@drawable/bg_fixed_selector"
+			android:layout_width="0dp"
+			android:layout_weight=".33"
+			android:layout_height="70dp"
+			android:button="@null"
+			android:gravity="center_horizontal"
+			android:layout_gravity="start"
+			android:padding="3dp"
+			android:visibility="gone" />
+
+	</RadioGroup>
+
+	<LinearLayout
+		android:id="@+id/prices_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/price_radio_group">
+
+		<TextView
+			android:id="@+id/tv_sell_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".33"
+			android:fontFamily="sans-serif-light"
+			android:gravity="center"
+			tools:text="123k ISK"
+			android:textSize="17sp"
+			android:textColor="@android:color/primary_text_dark"
+			android:shadowColor="#000000"
+			android:shadowRadius="1"
+			android:shadowDy="2.0"
+			/>
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#0000"
+			android:layout_margin="3dp" />
+
+		<TextView
+			android:id="@+id/tv_buy_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".33"
+			android:fontFamily="sans-serif-light"
+			android:gravity="center"
+			tools:text="@string/unknown"
+			android:textColor="@android:color/primary_text_dark"
+			android:textSize="17sp"
+			android:shadowColor="#000000"
+			android:shadowRadius="1"
+			android:shadowDy="2.0"
+			/>
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#0000"
+			android:layout_margin="3dp" />
+
+		<TextView
+			android:id="@+id/tv_produce_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".33"
+			android:fontFamily="sans-serif-light"
+			android:gravity="center"
+			tools:text="@string/unknown"
+			android:textSize="17sp"
+			android:textColor="@android:color/primary_text_dark"
+			android:shadowColor="#000000"
+			android:shadowRadius="1"
+			android:shadowDy="2.0"
+			/>
+
+		<TextView
+			android:id="@+id/tv_fixed_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".25"
+			android:fontFamily="sans-serif-light"
+			android:gravity="center"
+			tools:text="@string/unknown"
+			android:textSize="17sp"
+			android:textColor="@android:color/primary_text_dark"
+			android:shadowColor="#000000"
+			android:shadowRadius="1"
+			android:shadowDy="2.0"
+			android:visibility="gone" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/price_radio_group"
+		android:focusable="false"
+		android:clickable="false"
+		android:layout_above="@+id/prices_layout">
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".33"
+			android:layout_gravity="center"
+			android:src="@drawable/ic_sell_v2_white"
+			android:gravity="center"
+			android:focusable="false"
+			android:clickable="false"
+			android:contentDescription="@string/unknown" />
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#0000"
+			android:layout_margin="3dp" />
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".33"
+			android:layout_gravity="center"
+			android:src="@drawable/ic_buy_v2_white"
+			android:gravity="center"
+			android:focusable="false"
+			android:clickable="false"
+			android:contentDescription="@string/unknown" />
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="#0000"
+			android:layout_margin="3dp" />
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".33"
+			android:layout_gravity="center"
+			android:src="@drawable/ic_produce_v2_white"
+			android:gravity="center"
+			android:focusable="false"
+			android:clickable="false"
+			android:contentDescription="@string/unknown" />
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".25"
+			android:layout_gravity="center"
+			android:src="@drawable/ic_own_v2_white"
+			android:gravity="center"
+			android:focusable="false"
+			android:clickable="false"
+			android:contentDescription="@string/unknown"
+			android:visibility="gone" />
+
+	</LinearLayout>
+
+</RelativeLayout>

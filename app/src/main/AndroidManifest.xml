@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2015 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<manifest
+    package="fr.piconsoft.eoit"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:sharedUserId="fr.eoit"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <supports-screens android:largeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:name=".EOITApplication"
+        android:allowBackup="true"
+        android:description="@string/app_description"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name">
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".provider.ItemContentProvider" />
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="b4ca951f9aee76cb89c06c04d454cffa2f73b235" />
+
+        <activity
+            android:name=".ui.EOITActivity"
+            android:clearTaskOnLaunch="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/EOIT.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ItemListActivity"
+            android:label="@string/itemlisttitle"
+            android:theme="@style/EOIT.Light.DarkActionBar">
+
+            <!-- Receives the search request. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <!-- No category needed, because the Intent will specify this class component -->
+            </intent-filter>
+
+            <!-- Points to searchable meta data. -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ui.ItemInfoActivity"
+            android:label="Item info"
+            android:theme="@style/EOIT.Light.DarkActionBar.Overlay" />
+        <activity
+            android:name=".ui.StockActivity"
+            android:label="Stock"
+            android:theme="@style/EOIT.Light.DarkActionBar" />
+        <activity
+            android:name=".ui.ManufactureActivity"
+            android:label="Manufacture Item"
+            android:screenOrientation="portrait"
+            android:theme="@style/EOIT.RedActionBar" />
+        <activity
+            android:name=".ui.BlueprintActivity"
+            android:label="Blueprint info"
+            android:screenOrientation="portrait"
+            android:theme="@style/EOIT.Dark.BlueActionBar" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="Settings"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".ui.ApiKeyManagementActivity"
+            android:label="Api Key Management"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <intent-filter>
+                <action android:name="fr.piconsoft.eoit.ApiKeyManagementActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ApiKeySaverActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- eve://api.eveonline.com/installKey?keyID=XX&vCode=YY -->
+                <data
+                    android:host="api.eveonline.com"
+                    android:pathPrefix="/installKey"
+                    android:scheme="eve" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.LocationManagementActivity"
+            android:label="Location Management"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <intent-filter>
+                <action android:name="fr.piconsoft.eoit.LocationManagementActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.StationAddRemoveActivity"
+            android:label="Available stations"
+            android:launchMode="singleInstance"
+            android:theme="@style/EOIT.Dark" />
+        <activity
+            android:name=".ui.LocationPricesActivity"
+            android:label="Prices in favorite stations"
+            android:launchMode="singleInstance"
+            android:theme="@style/EOIT.Dark"
+            android:uiOptions="splitActionBarWhenNarrow" />
+        <activity
+            android:name=".ui.MiningSessionActivity"
+            android:label="Mining session"
+            android:launchMode="singleInstance"
+            android:theme="@style/EOIT.Dark" />
+        <activity
+            android:name=".ui.OreCompareActivity"
+            android:label="Ore compare"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".ui.LanguageSelectionActivity"
+            android:label="@string/language"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <intent-filter>
+                <action android:name="fr.piconsoft.eoit.LanguageSelectionActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.ItemContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.ItemContentProvider"
+            android:label="ItemProvider">
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider>
+        <provider
+            android:name=".provider.PriceContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.PriceContentProvider"
+            android:exported="false"
+            android:label="PriceProvider" />
+        <provider
+            android:name=".provider.LocationContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.LocationContentProvider"
+            android:exported="false"
+            android:label="LocationProvider" />
+        <provider
+            android:name=".provider.EveOnlineApiContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.EveOnlineApiContentProvider"
+            android:exported="false"
+            android:label="EveOnlineApiProvider" />
+        <provider
+            android:name=".provider.ManufacturingContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.ManufacturingContentProvider"
+            android:exported="false"
+            android:label="ManufacturingProvider" />
+        <provider
+            android:name=".provider.HistoContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.HistoContentProvider"
+            android:exported="false"
+            android:label="HistoContentProvider" />
+        <provider
+            android:name=".provider.LanguageContentProvider"
+            android:authorities="fr.piconsoft.eoit.provider.LanguageContentProvider"
+            android:exported="false"
+            android:label="LanguageContentProvider" />
+
+        <receiver
+            android:name=".receiver.HistoLoggerBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="fr.piconsoft.eoit.HistoLoggerBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.HistoSenderBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="fr.piconsoft.eoit.HistoSenderBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

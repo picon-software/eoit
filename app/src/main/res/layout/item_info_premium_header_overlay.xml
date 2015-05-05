@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="250dp">
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:background="@drawable/gradiant_upper" />
+
+	<View
+		android:id="@+id/cartouche"
+		android:layout_width="match_parent"
+		android:layout_height="20dp"
+		android:layout_alignBottom="@+id/item_volume"
+		android:layout_alignTop="@+id/item_name"
+		android:background="#66000000" />
+
+	<View
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/cartouche"
+		android:layout_alignLeft="@+id/item_icon_bg"
+		android:layout_alignRight="@+id/item_icon_bg"
+		android:layout_alignTop="@+id/item_icon_bg"
+		android:background="#66000000" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="20dp"
+		android:layout_alignBottom="@+id/item_volume"
+		android:background="@drawable/bottom_shadow" />
+
+	<View
+		android:id="@+id/item_icon_bg"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:layout_alignBottom="@+id/item_volume"
+		android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp"
+		android:background="#66000000" />
+
+	<ImageView
+		android:id="@+id/item_icon"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/item_icon_bg"
+		android:layout_alignLeft="@+id/item_icon_bg"
+		android:layout_alignRight="@+id/item_icon_bg"
+		android:layout_alignTop="@+id/item_icon_bg"
+		android:layout_margin="2dp"
+		android:adjustViewBounds="true"
+		android:contentDescription="@string/itemIcon"
+		android:scaleType="centerCrop"
+		android:src="@drawable/unknown" />
+
+	<TextView
+		android:id="@+id/item_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/item_volume"
+		android:layout_gravity="right"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/item_icon_bg"
+		android:ellipsize="end"
+		android:fontFamily="sans-serif-light"
+		android:gravity="right"
+		android:shadowColor="#000000"
+		android:shadowDy="2.0"
+		android:shadowRadius="1"
+		android:singleLine="true"
+		android:text="@string/unknown"
+		android:textColor="@android:color/primary_text_dark"
+		android:textSize="19sp" />
+
+	<ImageView
+		android:id="@+id/volume_icn"
+		android:layout_width="14dp"
+		android:layout_height="14dp"
+		android:layout_alignBottom="@+id/item_volume"
+		android:layout_alignTop="@+id/item_volume"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="2dp"
+		android:layout_toRightOf="@+id/item_icon_bg"
+		android:contentDescription="@string/itemIcon"
+		android:paddingTop="1dp"
+		android:src="@drawable/icn_volume" />
+
+	<TextView
+		android:id="@+id/item_volume"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_gravity="right"
+		android:layout_toRightOf="@+id/volume_icn"
+		android:gravity="center_vertical"
+		android:paddingBottom="3dp"
+		android:paddingTop="3dp"
+		android:shadowColor="#000000"
+		android:shadowDy="2.0"
+		android:shadowRadius="1"
+		android:text="@string/unknown"
+		android:textColor="@android:color/secondary_text_dark"
+		android:textSize="12sp"
+		/>
+
+</RelativeLayout>

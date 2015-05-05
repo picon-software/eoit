@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="#e5e5e5">
+
+	<include
+		android:id="@+id/header_include"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/row_header_stations_premium" />
+
+    <RelativeLayout
+        android:id="@+id/inner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_card_white"
+		android:layout_below="@+id/header_include"
+        android:layout_marginRight="2dp">
+
+        <ImageView
+            android:id="@+id/station_icon"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/station"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#55000000"
+            android:layout_alignBottom="@+id/corp_standing"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/corp_standing" />
+
+        <TextView
+            android:id="@+id/station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/station_icon"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="1"
+            android:textColor="@android:color/primary_text_light"
+            tools:text="Federation Navy testing Facilities"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/station_name"
+            android:layout_below="@+id/station_name"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed"
+            tools:text="The Forge > Jita IV - Moon 4"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/corp_standing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/station_icon"
+            android:padding="10dp"
+            tools:text="+7.80"
+            android:textColor="@android:color/primary_text_dark"
+            android:textStyle="bold"
+            android:shadowColor="#000000"
+            android:shadowRadius="1"
+            android:shadowDy="2.0" />
+
+        <!--suppress AndroidLintContentDescription -->
+        <ImageButton
+            android:id="@+id/favorite_station"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            style="@style/card_popup_anchor" />
+
+        <!--CheckBox
+            android:id="@+id/favorite_station"
+            android:button="@drawable/btn_star_holo_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/corp_standing"
+            android:layout_alignRight="@+id/corp_standing"
+            android:layout_marginRight="11dp" /-->
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/margin"
+		android:layout_below="@+id/header_include"
+        android:layout_width="0dp"
+        android:layout_height="142dp" />
+
+    <TextView
+        android:id="@+id/station_prod_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/margin"
+        android:textColor="@android:color/secondary_text_light"
+        android:background="@drawable/bg_tag_red"
+        android:contentDescription="@string/station"
+        android:text="@string/prod_station"
+        android:fontFamily="sans-serif-light"
+        android:visibility="gone"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/station_trade_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/margin"
+        android:textColor="@android:color/secondary_text_light"
+        android:background="@drawable/bg_tag_green"
+        android:contentDescription="@string/station"
+        android:text="@string/trade_station"
+        android:fontFamily="sans-serif-light"
+        android:visibility="gone"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/station_both_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/margin"
+        android:textColor="@android:color/secondary_text_light"
+        android:background="@drawable/bg_tag_grey"
+        android:contentDescription="@string/station"
+        android:text="@string/both_station"
+        android:fontFamily="sans-serif-light"
+        android:padding="5dp" />
+
+</RelativeLayout>

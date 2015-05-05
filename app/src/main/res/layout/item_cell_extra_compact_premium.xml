@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	tools:context=".activity.premium.ItemInfoActivity">
+
+	<ImageView
+		android:id="@+id/item_icon"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_alignParentLeft="true"
+		android:contentDescription="@string/itemIcon"
+		android:scaleType="centerCrop"
+		android:src="@drawable/icn_help_64" />
+
+	<TextView
+		android:id="@+id/item_quantity"
+		android:layout_width="wrap_content"
+		android:layout_height="30dp"
+		android:layout_toRightOf="@+id/item_icon"
+        android:gravity="center_vertical"
+        android:text="x12 500"
+		android:textColor="@android:color/secondary_text_light"
+		android:textSize="13sp"
+		android:layout_marginRight="5dp" />
+
+	<ImageView
+		android:id="@+id/warn_icon"
+		android:layout_width="16dip"
+		android:layout_height="16dip"
+		android:layout_alignBottom="@+id/item_icon"
+		android:layout_alignRight="@+id/item_icon"
+		android:contentDescription="@string/itemIcon"
+		android:src="@drawable/warn_icon"
+		android:visibility="gone" />
+
+</RelativeLayout>

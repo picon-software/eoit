@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/item_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/unknown"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/primary_text_dark" />
+
+    <TextView
+        android:id="@+id/item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/unknown"
+        android:textColor="@android:color/secondary_text_dark"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_red_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/item_quantity"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/unknown"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ITEM_PRICE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ITEM_VOLUME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:layout_toRightOf="@+id/ITEM_PRICE"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="38sp"
+        android:layout_height="38sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        android:contentDescription="@string/itemIcon"
+        android:src="@drawable/unknown" />
+
+    <ImageView
+        android:id="@+id/warn_icon"
+        android:layout_width="16dip"
+        android:layout_height="16dip"
+        android:layout_alignBottom="@+id/item_icon"
+        android:layout_alignRight="@+id/item_icon"
+        android:contentDescription="@string/itemIcon"
+        android:src="@drawable/warn_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

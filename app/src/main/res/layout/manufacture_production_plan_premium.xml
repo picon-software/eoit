@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white"
+	android:orientation="vertical"
+	android:padding="0dp"
+	tools:context=".ui.ManufacturePremiumActivity">
+
+	<!--GridView
+		android:id="@+id/manufactured_items"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:horizontalSpacing="0dp"
+		android:numColumns="2"
+		android:verticalSpacing="0dp"
+		android:background="@color/red_premium"
+		tools:listitem="@layout/item_cell_small_premium" /-->
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="72dp"
+		android:background="@color/darkgrey"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:theme="@style/Theme.AppCompat"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="10dp">
+
+		<ImageView
+			android:id="@+id/item_icon"
+			android:layout_width="48sp"
+			android:layout_height="48sp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="10dp"
+			android:contentDescription="@string/itemIcon"
+			android:src="@drawable/unknown" />
+
+		<EditText
+			android:id="@+id/runs"
+			android:theme="@style/Theme.AppCompat"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="3dip"
+			android:layout_toRightOf="@+id/item_icon"
+			android:inputType="number"
+			tools:text="0" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/runs"
+			android:layout_below="@+id/runs"
+			android:layout_marginLeft="10dp"
+			android:text="@string/runs"
+			android:textSize="12sp" />
+
+		<TextView
+			android:id="@+id/total_profit_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="13dp"
+			android:layout_toRightOf="@+id/runs"
+			android:text="@string/unknown"
+			android:textColor="@color/blue"
+			android:textSize="16sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/total_time_value"
+			style="@style/timeText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/total_profit_value"
+			android:layout_below="@+id/total_profit_value"
+			android:text="@string/unknown"
+			android:textColor="@android:color/secondary_text_dark" />
+	</RelativeLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<fragment
+				android:id="@+id/production_mining_list"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+			<fragment
+				android:id="@+id/production_shopping_list"
+				android:name="fr.piconsoft.eoit.ui.ShoppingStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_shopping_list" />
+
+			<fragment
+				android:id="@+id/production_step0"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+			<fragment
+				android:id="@+id/production_step1"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+			<fragment
+				android:id="@+id/production_step2"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+			<fragment
+				android:id="@+id/production_step3"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+			<fragment
+				android:id="@+id/production_step4"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+			<fragment
+				android:id="@+id/production_step5"
+				android:name="fr.piconsoft.eoit.ui.ProductionStepFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				tools:layout="@layout/manufacture_production_plan_step" />
+
+		</LinearLayout>
+
+	</ScrollView>
+</LinearLayout>

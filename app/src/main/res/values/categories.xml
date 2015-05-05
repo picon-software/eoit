@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="categorie_id_material">4</integer>
+	<integer name="categorie_id_ship">6</integer>
+	<integer name="categorie_id_skill">16</integer>
+	<integer name="categorie_id_commodity">17</integer>
+	<integer name="categorie_id_drone">18</integer>
+	<integer name="categorie_id_structure">23</integer>
+	<integer name="categorie_id_asteroid">25</integer>
+	<integer name="categorie_id_apparel">30</integer>
+	<integer name="categorie_id_planetary_commodities">43</integer>
+</resources>

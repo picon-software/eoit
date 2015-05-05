@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2012 Picon software
+	
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License along
+	with this program; if not, write to the Free Software Foundation, Inc.,
+	51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:text="@string/help_favorite1" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:text="@string/help_menu_options"
+		android:textStyle="bold" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="#66FFFFFF" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20dp" >
+
+		<TextView
+			android:id="@+id/menu_name0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginTop="10dp"
+			android:text="@string/search_hint"
+			android:textColor="@android:color/primary_text_dark"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/menu_image0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/menu_name0"
+			android:layout_alignTop="@+id/menu_name0"
+			android:layout_toRightOf="@+id/menu_name0"
+			android:contentDescription="@string/unknown"
+			android:src="@drawable/ic_menu_search" />
+
+		<TextView
+			android:id="@+id/menu_desc0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/menu_name0"
+			android:layout_toRightOf="@+id/menu_image0"
+			android:text="@string/help_favorite4" />
+
+		<TextView
+			android:id="@+id/menu_name1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/menu_desc0"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginTop="10dp"
+			android:text="@string/stock"
+			android:textColor="@android:color/primary_text_dark"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/menu_image1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/menu_name1"
+			android:layout_alignRight="@+id/menu_name2"
+			android:layout_alignTop="@+id/menu_name1"
+			android:layout_toRightOf="@+id/menu_name1"
+			android:contentDescription="@string/unknown"
+			android:src="@android:drawable/ic_menu_share" />
+
+		<TextView
+			android:id="@+id/menu_desc1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/menu_name1"
+			android:layout_toRightOf="@+id/menu_image1"
+			android:text="@string/help_favorite2" />
+
+		<TextView
+			android:id="@+id/menu_name2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/menu_desc1"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginTop="10dp"
+			android:text="@string/parameters"
+			android:textColor="@android:color/primary_text_dark"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/menu_desc2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/menu_name2"
+			android:layout_toRightOf="@+id/menu_name2"
+			android:text="@string/help_favorite3" />
+	</RelativeLayout>
+
+</LinearLayout>

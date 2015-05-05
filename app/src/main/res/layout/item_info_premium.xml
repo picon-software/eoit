@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2015 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<FrameLayout
+	android:id="@+id/content_frame"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:animateLayoutChanges="true"
+	android:background="@android:color/background_light"
+	tools:context=".activity.premium.ItemInfoActivity">
+
+	<ImageView
+		android:id="@+id/item_render"
+		android:layout_width="match_parent"
+		android:layout_height="380dp"
+		android:adjustViewBounds="true"
+		android:background="@drawable/bg"
+		android:contentDescription="@string/itemIcon"
+		android:scaleType="centerCrop" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:background="@drawable/gradiant_upper" />
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/recycler_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="vertical" />
+
+	<fr.piconsoft.eoit.ui.widget.DrawInsetsFrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:insetBackground="#9000" />
+
+	<com.melnykov.fab.FloatingActionButton
+		android:id="@+id/button_floating_action"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:layout_margin="16dp"
+		android:onClick="onManufacture"
+		android:src="@drawable/ic_produce_v2_white"
+		app:fab_colorNormal="@color/red_premium"
+		app:fab_colorPressed="@color/light_red_premium" />
+
+</FrameLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<resources>
+
+	<color name="light_red_premium">#ffff797d</color>
+	<color name="red_premium">#d94d4c</color>
+	<color name="dark_red_premium">#9B4A49</color>
+	<color name="blue_premium">#ff4cb3d2</color>
+	<color name="dark_blue_premium">#ff49839c</color>
+	<color name="green_premium">#87aa66</color>
+
+	<color name="produce">@color/red_premium</color>
+	<color name="sell">@color/green_premium</color>
+	<color name="buy">#eca539</color>
+	<color name="fixed">#999</color>
+	<color name="profit">@color/blue_premium</color>
+
+	<color name="red">#eb1313</color>
+	<color name="blue">#33b5e5</color>
+	<color name="blue_bg_selector">#8833b5e5</color>
+	<color name="green">#8bc53f</color>
+	<color name="yellow">#fffc8b</color>
+	<color name="grey">#55FFFFFF</color>
+	<color name="darkgrey">#DD151515</color>
+	<color name="selected_bg">#889AB8F7</color>
+	<color name="widgetTextColor">#9999cc00</color>
+	<color name="warnBackgroundColor">#22FFFF00</color>
+	<color name="actionbar_background_dark">#33151515</color>
+	<color name="activity_background">#000000</color>
+
+	<color name="sec_10">#2FEFEF</color>
+	<color name="sec_9">#48F0C0</color>
+	<color name="sec_8">#00EF47</color>
+	<color name="sec_7">#00F000</color>
+	<color name="sec_6">#8FEF2F</color>
+	<color name="sec_5">#EFEF00</color>
+	<color name="sec_4">#D77700</color>
+	<color name="sec_3">#F06000</color>
+	<color name="sec_2">#F04800</color>
+	<color name="sec_1">#D73000</color>
+	<color name="sec_0">#F00000</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+</resources>

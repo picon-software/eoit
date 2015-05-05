@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@android:color/background_light"
+	tools:context=".activity.premium.ItemInfoActivity">
+
+	<ImageView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/blueprint_icon"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:contentDescription="@string/itemIcon"
+		android:layout_marginTop="16dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginBottom="4dp"
+		android:scaleType="centerCrop"
+		android:adjustViewBounds="true"
+		android:src="@drawable/unknown" />
+
+	<TextView
+		android:id="@+id/blueprint_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/invent_icon"
+		android:layout_alignTop="@+id/blueprint_icon"
+		android:layout_marginLeft="72dp"
+		android:ellipsize="end"
+		android:singleLine="true"
+		tools:text="@string/unknown"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		/>
+
+	<ImageView
+		android:id="@+id/time_icn"
+		android:layout_width="14dp"
+		android:layout_height="14dp"
+		android:layout_marginLeft="72dp"
+		android:layout_marginRight="2dp"
+		android:padding="2dp"
+		android:layout_alignTop="@+id/blueprint_produce_time"
+		android:layout_alignBottom="@+id/blueprint_produce_time"
+		android:contentDescription="@string/itemIcon"
+		android:src="@drawable/clock_grey" />
+
+	<TextView
+		android:id="@+id/blueprint_produce_time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/time_icn"
+		android:layout_below="@+id/blueprint_name"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		tools:text="@string/unknown"
+		/>
+
+	<ImageView
+		android:id="@+id/invent_icon"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:padding="10dp"
+		android:layout_alignParentRight="true"
+		android:layout_alignTop="@+id/blueprint_icon"
+		android:layout_marginRight="4dp"
+		android:onClick="openInvention"
+		android:src="@drawable/invention"
+		android:background="@drawable/bg_selector_white"
+		android:contentDescription="@string/unknown" />
+
+	<LinearLayout
+		android:id="@+id/mlpl"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:orientation="horizontal"
+		android:paddingLeft="72dp"
+		android:paddingRight="16dp"
+		android:background="@drawable/bg_selector_white"
+		android:onClick="openMETEDialog"
+		android:layout_below="@+id/blueprint_icon">
+
+		<ImageView
+			android:layout_width="16dp"
+			android:layout_height="16dp"
+			android:layout_marginRight="4dp"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/industry_me"
+			android:contentDescription="@string/unknown" />
+
+		<TextView
+			android:id="@+id/ml"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			tools:text="2%"
+			android:layout_marginRight="16dp"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<ImageView
+			android:layout_width="16dp"
+			android:layout_height="16dp"
+			android:layout_marginRight="4dp"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/industry_te"
+			android:contentDescription="@string/unknown" />
+
+		<TextView
+			android:id="@+id/pl"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			tools:text="4%"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/job_cost_layout"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:orientation="vertical"
+		android:paddingLeft="72dp"
+		android:paddingRight="16dp"
+		android:background="@drawable/bg_selector_white"
+		android:layout_below="@+id/mlpl">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/job_cost"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			/>
+
+		<TextView
+			android:id="@+id/job_cost"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			tools:text="317 059 ISK"
+			/>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginLeft="72dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:layout_below="@+id/job_cost_layout"
+		android:background="#999" />
+
+</RelativeLayout>

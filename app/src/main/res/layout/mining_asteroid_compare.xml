@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Picon software
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along
+  ~ with this program; if not, write to the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".activity.premium.OreCompareActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+        android:background="#e5e5e5"
+        android:padding="10dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+			android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_card_white">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal"
+				android:padding="5dp">
+
+				<View
+					android:layout_width="7dp"
+					android:layout_height="7dp"
+					android:layout_margin="4dp"
+					android:background="@color/sec_10" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/sec_10"
+					android:textColor="@android:color/primary_text_light"
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<fragment
+					android:id="@+id/ore_10_1"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+				<fragment
+					android:id="@+id/ore_10_2"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_marginTop="5dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item">
+				</fragment>
+
+
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+			android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_card_white">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal"
+				android:padding="5dp">
+
+				<View
+					android:layout_width="7dp"
+					android:layout_height="7dp"
+					android:layout_margin="4dp"
+					android:background="@color/sec_9" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/sec_9"
+					android:textColor="@android:color/primary_text_light"
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/dash"
+						android:layout_marginLeft="5dp"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+					<View
+						android:layout_width="7dp"
+						android:layout_height="7dp"
+						android:layout_margin="4dp"
+						android:background="@color/sec_8" />
+
+					<TextView
+						android:id="@+id/sec_to"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/sec_8"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<fragment
+					android:id="@+id/ore_9_1"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+				android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_card_white">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal"
+				android:padding="5dp">
+
+				<View
+					android:layout_width="7dp"
+					android:layout_height="7dp"
+					android:layout_margin="4dp"
+					android:background="@color/sec_7" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/sec_7"
+					android:textColor="@android:color/primary_text_light"
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/dash"
+						android:layout_marginLeft="5dp"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+					<View
+						android:layout_width="7dp"
+						android:layout_height="7dp"
+						android:layout_margin="4dp"
+						android:background="@color/sec_5" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/sec_5"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<fragment
+					android:id="@+id/ore_7_1"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+				android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_card_white">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal"
+				android:padding="5dp">
+
+				<View
+					android:layout_width="7dp"
+					android:layout_height="7dp"
+					android:layout_margin="4dp"
+					android:background="@color/sec_4" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/sec_4"
+					android:textColor="@android:color/primary_text_light"
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/dash"
+						android:layout_marginLeft="5dp"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+					<View
+						android:layout_width="7dp"
+						android:layout_height="7dp"
+						android:layout_margin="4dp"
+						android:background="@color/sec_3" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/sec_3"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<fragment
+					android:id="@+id/ore_4_1"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+				android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_card_white">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal"
+				android:padding="5dp">
+
+				<View
+					android:layout_width="7dp"
+					android:layout_height="7dp"
+					android:layout_margin="4dp"
+					android:background="@color/sec_2" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/sec_2"
+					android:textColor="@android:color/primary_text_light"
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/dash"
+						android:layout_marginLeft="5dp"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+					<View
+						android:layout_width="7dp"
+						android:layout_height="7dp"
+						android:layout_margin="4dp"
+						android:background="@color/sec_1" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="sans-serif-light"
+						android:text="@string/sec_1"
+						android:textColor="@android:color/primary_text_light"
+						android:textSize="12sp"
+						android:textStyle="normal" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<fragment
+					android:id="@+id/ore_2_1"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_card_white">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal"
+				android:padding="5dp">
+
+				<View
+					android:layout_width="7dp"
+					android:layout_height="7dp"
+					android:layout_margin="4dp"
+					android:background="@color/sec_0" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/sec_0"
+					android:textColor="@android:color/primary_text_light"
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<fragment
+					android:id="@+id/ore_0_1"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+				<fragment
+					android:id="@+id/ore_0_2"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_marginTop="5dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+				<fragment
+					android:id="@+id/ore_0_3"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_marginTop="5dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+				<fragment
+					android:id="@+id/ore_0_4"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_marginTop="5dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+				<fragment
+					android:id="@+id/ore_0_5"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_marginTop="5dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+				<fragment
+					android:id="@+id/ore_0_6"
+					android:name="fr.piconsoft.eoit.ui.OreFragment"
+					android:layout_marginTop="5dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:layout="@layout/mining_asteroid_compare_item" />
+
+			</LinearLayout>
+		</RelativeLayout>
+
+	</LinearLayout>
+</ScrollView>

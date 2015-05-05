@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2012 Picon software
+	
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License along
+	with this program; if not, write to the Free Software Foundation, Inc.,
+	51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dip"
+		android:text="@string/stations_help_message"
+		android:textSize="12sp" />
+
+	<AutoCompleteTextView
+		android:id="@+id/REGION_NAME"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/textView1"
+		android:layout_margin="10dip"
+		android:layout_toLeftOf="@+id/REGION_NAME_CHECK"
+		android:hint="@string/region"
+		android:textSize="14sp" />
+
+	<ImageView
+		android:id="@+id/REGION_NAME_CHECK"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_alignTop="@+id/REGION_NAME"
+		android:layout_alignBottom="@+id/REGION_NAME"
+		android:layout_marginRight="10dp"
+		android:contentDescription="@string/unknown"
+		android:src="@drawable/icon_ok" />
+
+	<AutoCompleteTextView
+		android:id="@+id/SOLAR_SYSTEM_NAME"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/REGION_NAME"
+		android:layout_margin="10dip"
+		android:layout_toLeftOf="@+id/SOLAR_SYSTEM_NAME_CHECK"
+		android:hint="@string/solar_system"
+		android:textSize="14sp" />
+
+	<ImageView
+		android:id="@+id/SOLAR_SYSTEM_NAME_CHECK"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_alignTop="@+id/SOLAR_SYSTEM_NAME"
+		android:layout_alignBottom="@+id/SOLAR_SYSTEM_NAME"
+		android:layout_marginRight="10dp"
+		android:contentDescription="@string/unknown"
+		android:src="@drawable/icon_ok" />
+
+	<AutoCompleteTextView
+		android:id="@+id/STATION_NAME"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/SOLAR_SYSTEM_NAME"
+		android:layout_margin="10dip"
+		android:layout_toLeftOf="@+id/STATION_NAME_CHECK"
+		android:hint="@string/station"
+		android:textSize="12sp" />
+
+	<ImageView
+		android:id="@+id/STATION_NAME_CHECK"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_alignTop="@+id/STATION_NAME"
+		android:layout_alignBottom="@+id/STATION_NAME"
+		android:layout_marginRight="10dp"
+		android:contentDescription="@string/unknown"
+		android:src="@drawable/icon_ok" />
+
+</RelativeLayout>
